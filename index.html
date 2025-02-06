@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Home - Las Flores Food</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+        <meta name="description" content="Las Flores Food offers meal recipes and drink recipes at home." />
+
+        <!-- 
+        Facebook
+        You can use Open Graph tags to customize link previews.
+        Learn more: https://developers.facebook.com/docs/sharing/webmasters 
+        -->
+        <meta property="og:url"           content="https://aero3ddev.github.io/las-flores-food" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="Las Flores Food" />
+        <meta property="og:description"   content="Las Flores Food offers meal recipes and drink recipes at home." />
+        <meta property="og:image"         content="https://aero3ddev.github.io/las-flores-food/images/canary-islands-paella_1024.jpg" />
+        <meta property="og:image:type"    content="image/jpeg" />
+        <meta property="og:image:width"   content="1024" />
+        <meta property="og:image:height"  content="768" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card"        content="summary" />
+		<meta name="twitter:site"        content="@Aero3DDev" />
+		<meta name="twitter:creator"     content="@Aero3DDev" />
+		<meta name="twitter:url"         content="https://aero3ddev.github.io/las-flores-food" />
+		<meta name="twitter:title"       content="Las Flores Food" />
+		<meta name="twitter:description" content="Las Flores Food offers meal recipes and drink recipes at home." />
+		<meta name="twitter:image"       content="https://aero3ddev.github.io/las-flores-food/images/canary-islands-paella_1024.jpg" />
+
+        <link href="css/reset.css" rel="stylesheet" />
+        <link href="css/main.css" rel="stylesheet" />
+        <link href="css/navigation.css" rel="stylesheet" />
+        <link href="css/card-box.css" rel="stylesheet" />
+        <link href="css/modalImage.css" rel="stylesheet" />
+        <link href="images/paella-lunch.ico" rel="icon" />
+    </head>
+
+    <body>
+
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            let js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <div id="wrapper">
+
+            <header>
+                <h1>Las Flores Food</h1>
+            </header><!--end header-->
+            
+            <nav class="topnav" id="myTopnav">
+                <ul>
+                    <li><a>MENU</a></li>
+                    <li><a class="active" href="index.html"><i aria-hidden="true" class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="html/about.html">About</a></li>
+                    <li><a href="html/meal-recipes/meals.html"><i aria-hidden="true" class="fa fa-fw fa-cutlery"></i> Meal Recipes</a></li>
+                    <li><a href="html/drink-recipes/drinks.html"><i aria-hidden="true" class="fa fa-fw fa-glass"></i> Drink Recipes</a></li>
+                    <li><a href="html/food-3d-models/models.html"><i aria-hidden="true" class="fa fa-fw fa-cube"></i> Food 3D Models</a></li>
+                    <li><a href="html/submit-recipe.html">Submit Recipe</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-icon" onclick="myNavFunction()">
+                            <!-- Containing fa-bars icon and alternative text -->
+                            <i aria-hidden="true" class="fa fa-bars"></i><span class="fa-sr-only">The menu list</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav><!--end nav-->
+
+            <main>
+                <section>
+                    <header>
+                        <h2>Las Flores Food</h2>
+                    </header>
+                    
+                    <!-- Card Box Home 1 -->
+                    <div class="card-box-home-1">
+                        <p class="cross-pattern"></p>
+                        <p class="box-left-orange"></p>
+                        <p class="box-right-orange"></p>
+
+                        <article class="box-text">
+                            <h3>Meal Recipes</h3>
+                            <p>
+                                Be a master chef yourself and learn 
+                                how to cook exotic dishes at home 
+                                with recipes offered on this site.<br />
+                                <a href="html/meal-recipes/meals.html"><i aria-hidden="true" class="fa fa-fw fa-cutlery"></i> Meal Recipes</a>
+                            </p> 
+                        </article>
+
+                        <picture class="box-pic">
+                            <source srcset="images/shrimp_sandwich_1024.jpg" media="(min-width: 1024px)" />
+                            <source srcset="images/shrimp_sandwich_650.jpg" media="(min-width: 601px)" />
+                            <source srcset="images/shrimp_sandwich_427.jpg" media="(max-width: 600px)" />
+                            <img src="images/shrimp_sandwich.JPG" alt="Shrimp Sandwich meal" />
+                        </picture>
+                    </div>
+
+                    <!-- Card Box Home 2 -->
+                    <div class="card-box-home-2">
+                        <p class="cross-pattern"></p>
+                        <p class="box-left-orange"></p>
+                        <p class="box-right-orange"></p>
+
+                        <article class="box-text">
+                            <h3>Drink Recipes</h3>
+                            <p>
+                                Become a drink master yourself and 
+                                learn how to create exotic drinks and cocktails 
+                                at home with recipes offered on this page.<br />
+                                <a href="html/drink-recipes/drinks.html"><i aria-hidden="true" class="fa fa-fw fa-glass"></i> Drink Recipes</a>
+                            </p> 
+                        </article>
+
+                        <picture class="box-pic">
+                            <source srcset="images/tequila_sunrise_cocktails_1024.jpg" media="(min-width: 1024px)" />
+                            <source srcset="images/tequila_sunrise_cocktails_650.jpg" media="(min-width: 601px)" />
+                            <source srcset="images/tequila_sunrise_cocktails_427.jpg" media="(max-width: 600px)" />
+                            <img src="images/tequila_sunrise_cocktails.jpg" alt="Tequila Sunrise cocktails" />
+                        </picture>
+                    </div> 
+                   
+                </section>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- The Close Button -->
+                    <p class="close" role="button" aria-pressed="false">
+                        <!-- Containing fa-close icon and alternative text -->
+                        <i aria-hidden="true" class="fa fa-close"></i><span class="fa-sr-only">Close the modal</span>
+                    </p>
+                
+                    <!-- Modal Content (The Image) -->
+                    <p>
+                        <img class="modal-content" id="img01" src="images/no_image_available.jpg" alt="No image available" />
+                    </p>
+                    
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+
+            </main><!--end main-->
+
+            <footer>
+                <address>
+                    <p class="heading">Phone</p>
+                    <p>(888) 555-5555</p>
+                </address>
+                <address>
+                    <p class="heading">Email</p>
+                    <p>example@email.com</p>
+                </address>
+            </footer><!--end footer-->
+
+            <div id="copyright">
+                <ul>
+                    <li>&copy; Las Flores Food</li>
+                    <li>Design: HTML5 UP</li>
+                </ul>
+            </div><!--end copyright-->
+
+            <div id="social-share">
+                <ul>
+                    <li>
+                        <a id="fb" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https://aero3ddev.github.io/las-flores-food" class="fb-xfbml-parse-ignore">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-facebook"></i><span class="fa-sr-only">Share to Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="twitter" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=https://aero3ddev.github.io/las-flores-food">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-twitter"></i><span class="fa-sr-only">Share to Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="pinterest" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/button/?url=https://aero3ddev.github.io/las-flores-food&media=https://aero3ddev.github.io/las-flores-food/images/canary-islands-paella_1024.jpg&is_video=false&description=Las%20Flores%20Food">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-pinterest"></i><span class="fa-sr-only">Share to Pinterest</span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--end social-share-->
+
+        </div><!--end wrapper-->
+
+        <script src="js/modalImage.js"></script>
+        <script src="js/navigation.js"></script>
+        
+    </body>
+</html>

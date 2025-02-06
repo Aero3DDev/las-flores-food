@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Drink Information - Las Flores Food</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+        <meta name="description" content="Drink information recipe, with all the ingredients and instructions you need to create drinks at home." />
+        <link href="../../css/reset.css" rel="stylesheet" />
+        <link href="../../css/main.css" rel="stylesheet" />
+        <link href="../../css/navigation.css" rel="stylesheet" />
+        <link href="../../css/modalImage.css" rel="stylesheet" />
+        <link href="../../images/paella-lunch.ico" rel="icon" />
+        <script src="../../js/drinkInfo.js" type="module"></script>
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <header>
+                <h1>Las Flores Food</h1>
+            </header><!--end header-->
+            
+            <nav class="topnav" id="myTopnav">
+                <ul>
+                    <li><a>MENU</a></li>
+                    <li><a href="../../index.html"><i aria-hidden="true" class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../meal-recipes/meals.html"><i aria-hidden="true" class="fa fa-fw fa-cutlery"></i> Meal Recipes</a></li>
+                    <li><a href="drinks.html"><i aria-hidden="true" class="fa fa-fw fa-glass"></i> Drink Recipes</a></li>
+                    <li><a href="../food-3d-models/models.html"><i aria-hidden="true" class="fa fa-fw fa-cube"></i> Food 3D Models</a></li>
+                    <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-icon" onclick="myNavFunction()">
+                            <!-- Containing fa-bars icon and alternative text -->
+                            <i aria-hidden="true" class="fa fa-bars"></i><span class="fa-sr-only">The menu list</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav><!--end nav-->
+
+            <main id="drink-info-background">
+                <section>
+                    <header>
+                        <h2>Drink Information at Las Flores Food</h2>
+                    </header>
+
+                    <article aria-live="polite">
+                        <h3 id="recipe-title"></h3>
+
+                        <picture id="drink-info-pic">
+                            <img src="../../images/no_image_available.jpg" alt="No image available" />
+                        </picture>
+
+                        <hr />
+                
+                        <h4>Ingredients</h4>
+                        <ul id="recipe-ingredients">
+                        </ul>
+
+                        <hr />
+                
+                        <h4>Instructions</h4>
+                        <p id="recipe-instructions">
+                        </p>
+                    </article>
+
+                </section>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- The Close Button -->
+                    <p class="close" role="button" aria-pressed="false">
+                        <!-- Containing fa-close icon and alternative text -->
+                        <i aria-hidden="true" class="fa fa-close"></i><span class="fa-sr-only">Close the modal</span>
+                    </p>
+                
+                    <!-- Modal Content (The Image) -->
+                    <p>
+                        <img class="modal-content" id="img01" src="../../images/no_image_available.jpg" alt="No image available" />
+                    </p>
+                    
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption"></div>
+                </div>
+
+            </main><!--end main-->
+
+            <footer>
+                <address>
+                    <p class="heading">Phone</p>
+                    <p>(888) 555-5555</p>
+                </address>
+                <address>
+                    <p class="heading">Email</p>
+                    <p>example@email.com</p>
+                </address>
+            </footer><!--end footer-->
+
+            <div id="copyright">
+                <ul>
+                    <li>&copy; Las Flores Food</li>
+                    <li>Design: HTML5 UP</li>
+                </ul>
+            </div><!--end copyright-->
+
+            <div id="social-share">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-facebook"></i><span class="fa-sr-only">Share to Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-twitter"></i><span class="fa-sr-only">Share to Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-pinterest"></i><span class="fa-sr-only">Share to Pinterest</span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--end social-share-->
+
+        </div><!--end wrapper-->
+
+        <script src="../../js/modalImage.js"></script>
+        <script src="../../js/navigation.js"></script>
+
+    </body>
+</html>

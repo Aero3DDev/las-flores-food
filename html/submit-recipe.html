@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Submit Recipe - Las Flores Food</title>
+        <meta charset="UTF-8" />
+        <meta  name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+        <meta name="description" content="Form to submit and share your favorite recipes." />
+        <link href="../css/reset.css" rel="stylesheet" />
+        <link href="../css/main.css" rel="stylesheet" />
+        <link href="../css/navigation.css" rel="stylesheet" />
+        <link href="../images/paella-lunch.ico" rel="icon" />
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+            <header>
+                <h1>Las Flores Food</h1>
+            </header><!--end header-->
+            
+            <nav class="topnav" id="myTopnav">
+                <ul>
+                    <li><a>MENU</a></li>
+                    <li><a href="../index.html"><i aria-hidden="true" class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="meal-recipes/meals.html"><i aria-hidden="true" class="fa fa-fw fa-cutlery"></i> Meal Recipes</a></li>
+                    <li><a href="drink-recipes/drinks.html"><i aria-hidden="true" class="fa fa-fw fa-glass"></i> Drink Recipes</a></li>
+                    <li><a href="food-3d-models/models.html"><i aria-hidden="true" class="fa fa-fw fa-cube"></i> Food 3D Models</a></li>
+                    <li><a class="active" href="submit-recipe.html">Submit Recipe</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-icon" onclick="myNavFunction()">
+                            <!-- Containing fa-bars icon and alternative text -->
+                            <i aria-hidden="true" class="fa fa-bars"></i><span class="fa-sr-only">The menu list</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav><!--end nav-->
+
+            <main id="submit-background">
+                <section>
+                    <header>
+                        <h2>Submit your favorite Recipe at Las Flores Food</h2>
+                    </header>
+                   
+                    <h3 id="submit-recipe-title"> Recipe Details</h3>
+
+                    <!-- Form -->
+                    <form method="post" action="#">
+
+                        <!-- Fieldset: Fill in the recipe's information. -->
+                        <fieldset>
+                            <legend>Fill in the recipe's information</legend>
+                            <p>
+                                <label for="RecipeTitle">Recipe Title*:</label>
+                                <input type="text" name="recipeTitle" id="RecipeTitle" required />
+                            </p>
+
+                            <p>
+                                <label for="Ingredients">Ingredients*:</label>
+                                <textarea name="ingredients" rows="4" cols="30" id="Ingredients" required placeholder="2 cup of milk..."></textarea>
+                            </p>
+
+                            <p>
+                                <label for="Instructions">Instructions*:</label>
+                                <textarea name="instructions" rows="4" cols="30" id="Instructions" required placeholder="Mix sugar and flour..."></textarea>
+                            </p>
+
+                            <p>
+                                <label for="UploadImage">Upload image to the recipe*:</label>
+                                <input type="file" name="uploadImage" id="UploadImage" required accept=".png, .jpg, .jpeg" />
+                            </p>
+
+                        </fieldset>
+
+                        <!-- Fieldset: Fill in your information. -->
+                        <fieldset>
+                            <legend>Fill in your information</legend>
+
+                            <p>
+                                <label for="Name">Name*:</label>
+                                <input type="text" name="name" id="Name" />
+                            </p>
+
+                            <p>
+                                <label for="Email">Email*:</label>
+                                <input type="email" name="email" id="Email" required pattern="\w+@\w+.+\w" placeholder="name@example.com" autocomplete="email" />
+                            </p>
+
+                        </fieldset>
+
+                        <!-- Button submit: Submit your recipe -->
+                        <p>
+                            <button id="form-submit" type="submit">
+                                <i aria-hidden="true" class="fa fa-paper-plane"></i> Submit your recipe
+                            </button>
+
+                            <button id="form-reset" type="reset">
+                                <i aria-hidden="true" class="fa fa-remove"></i> Clear the form
+                            </button>
+                        </p>
+
+                    </form><!--end form-->
+
+                </section>
+                
+            </main><!--end main-->
+
+            <footer>
+                <address>
+                    <p class="heading">Phone</p>
+                    <p>(888) 555-5555</p>
+                </address>
+                <address>
+                    <p class="heading">Email</p>
+                    <p>example@email.com</p>
+                </address>
+            </footer><!--end footer-->
+
+            <div id="copyright">
+                <ul>
+                    <li>&copy; Las Flores Food</li>
+                    <li>Design: HTML5 UP</li>
+                </ul>
+            </div><!--end copyright-->
+
+            <div id="social-share">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-facebook"></i><span class="fa-sr-only">Share to Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-twitter"></i><span class="fa-sr-only">Share to Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-pinterest"></i><span class="fa-sr-only">Share to Pinterest</span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--end social-share-->
+
+        </div><!--end wrapper-->
+
+        <script src="../js/navigation.js"></script>
+
+    </body>
+</html>

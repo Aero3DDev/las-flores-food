@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Food 3D Models - Las Flores Food</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+        <meta name="description" content="Find and view food 3D models." />
+        <link href="../../css/reset.css" rel="stylesheet" />
+        <link href="../../css/main.css" rel="stylesheet" />
+        <link href="../../css/navigation.css" rel="stylesheet" />
+        <link href="../../css/card-box.css" rel="stylesheet" />
+        <link href="../../images/paella-lunch.ico" rel="icon" />
+
+        <script type="module">
+            import {getModels} from '../../js/fetchModels.js';
+            import {RecipeCard} from '../../js/RecipeCard.js';
+            import {isEmpty} from '../../js/utils.js';
+
+            let modelsArticle = document.querySelector('#models-article');
+            let noModelsFound = document.querySelector('#no-models-found');
+
+            // Create Model Card Box
+            let createModelCardBox = (model) => 
+            {
+                let cardBoxRecipe = document.createElement('div');
+                cardBoxRecipe.classList.add("card-box-recipe");
+                cardBoxRecipe.setAttribute("aria-live", "polite");
+
+                let recipeCard = new RecipeCard("Model", model.idModel, model.strModel, model.strModelThumb);
+                cardBoxRecipe.innerHTML = recipeCard.toInnerHTML();
+
+                modelsArticle.appendChild(cardBoxRecipe);
+            }
+
+
+            // Fetch and Display All Models
+            getModels().then((data) => 
+            {
+                for(let i = 0; i < data.models.length; i++)
+                {
+                    if (data.models[i].strCategory === "Dessert")
+                    {
+                        createModelCardBox(data.models[i]);
+                    }
+                }
+
+                noModelsFound.innerText = `Models result for the dessert`;
+            })    
+            .catch((error) => {
+                noModelsFound.innerText = `No models result!`;
+            });
+
+
+            // Fetch and Display Searched Models
+            let searchModel = () =>
+            {
+                const modelInput = document.getElementById('models-input').value;
+
+                // Check If User Searched For Anything
+                if(modelInput)
+                {
+                    // Clear the No Model Found Tag For Every Single New Search
+                    noModelsFound.innerText = ``;
+
+                    // Clear the Model Info Article For Every Single New Search
+                    modelsArticle.innerHTML = ``;
+
+                    getModels().then((data) => 
+                    {
+                        // Check If Searched Model Is Found Or Not
+                        for(let i = 0; i < data.models.length; i++)
+                        {
+                            if (data.models[i].strModel.toUpperCase().includes(modelInput.toUpperCase()))
+                            {
+                                createModelCardBox(data.models[i]);
+                                noModelsFound.innerText = `Models result for ${modelInput}`;
+                            }
+                        }
+
+                        if(modelsArticle.innerText === '') {
+                            noModelsFound.innerText = `No model found for ${modelInput}!`;
+                        }
+                    })
+                    .catch((error) => {
+                        noModelsFound.innerText = `No models result!`;
+                    });
+                }
+                else{
+                    // Clear the Model Info Article For Every Single New Search
+                    modelsArticle.innerHTML = ``;
+                    
+                    noModelsFound.innerText = `You haven't entered anything`;
+                }
+            }
+
+
+            // Execute a function when the user click the button
+            document.getElementById('models-submit').addEventListener('click', searchModel);
+
+            // Execute a function when the user presses a key on the keyboard
+            document.getElementById('models-input').addEventListener("keypress", function(event)
+            {
+                // If the user presses the "Enter" key on the keyboard
+                if (event.key === "Enter") {
+                    // Cancel the default action, if needed
+                    event.preventDefault();
+                    // Trigger the button element with a click
+                    document.getElementById('models-submit').click();
+                }
+            });
+
+        </script>
+
+    <body>
+
+        <div id="wrapper">
+
+            <header>
+                <h1>Las Flores Food</h1>
+            </header><!--end header-->
+            
+            <nav class="topnav" id="myTopnav">
+                <ul>
+                    <li><a>MENU</a></li>
+                    <li><a href="../../index.html"><i aria-hidden="true" class="fa fa-fw fa-home"></i> Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../meal-recipes/meals.html"><i aria-hidden="true" class="fa fa-fw fa-cutlery"></i> Meal Recipes</a></li>
+                    <li><a href="../drink-recipes/drinks.html"><i aria-hidden="true" class="fa fa-fw fa-glass"></i> Drink Recipes</a></li>
+                    <li><a class="active" href="models.html"><i aria-hidden="true" class="fa fa-fw fa-cube"></i> Food 3D Models</a></li>
+                    <li><a href="../submit-recipe.html">Submit Recipe</a></li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-icon" onclick="myNavFunction()">
+                            <!-- Containing fa-bars icon and alternative text -->
+                            <i aria-hidden="true" class="fa fa-bars"></i><span class="fa-sr-only">The menu list</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav><!--end nav-->
+
+            <main>
+                <section>
+                    <p><a name="top"></a></p>
+
+                    <header>
+                        <h2>Food 3D Models at Las Flores Food</h2>
+                    </header>
+
+                    <!-- search-form -->
+                    <form class="search-form">
+                        <label for="models-input"><span class="fa-sr-only">Search a 3d model</span></label>
+                        <input id="models-input" type="text" placeholder="Search.." name="search">
+                        <button id="models-submit" type="button">
+                            <i aria-hidden="true" class="fa fa-solid fa-search"></i><span class="fa-sr-only">Open search result</span>
+                        </button>
+                    </form><!--end search-form-->
+                    <h3 id="no-models-found"></h3>
+                    
+                    <article id="models-article">
+
+                    </article>
+
+                    <p><a class="btn" href="#top"><i aria-hidden="true" class="fa fa-arrow-up"></i> Back to Top</a></p>
+                   
+                </section>
+
+            </main><!--end main-->
+
+            <footer>
+                <address>
+                    <p class="heading">Phone</p>
+                    <p>(888) 555-5555</p>
+                </address>
+                <address>
+                    <p class="heading">Email</p>
+                    <p>example@email.com</p>
+                </address>
+            </footer><!--end footer-->
+
+            <div id="copyright">
+                <ul>
+                    <li>&copy; Las Flores Food</li>
+                    <li>Design: HTML5 UP</li>
+                </ul>
+            </div><!--end copyright-->
+
+            <div id="social-share">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-facebook"></i><span class="fa-sr-only">Share to Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-twitter"></i><span class="fa-sr-only">Share to Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i aria-hidden="true" class="fa-share fa-fw fa-pinterest"></i><span class="fa-sr-only">Share to Pinterest</span>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--end social-share-->
+
+        </div><!--end wrapper-->
+
+        <script src="../../js/navigation.js"></script>
+        
+    </body>
+</html>

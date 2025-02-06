@@ -1,0 +1,875 @@
+@font-face {
+    font-family: 'Joti One';
+    src: url(fonts/Joti_One/JotiOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(fonts/SourceSansPro/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: Merriweather;
+    src: url(fonts/Merriweather/Merriweather-Regular.ttf);
+}
+
+@font-face {
+    font-family: FontAwesome;
+    src: url(fonts/font-awesome/fontawesome-webfont.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General rules */
+html {
+    font-size: 105%;
+    overflow-x: hidden;
+}
+
+body {
+    font: 300 1rem/1.375 Merriweather, Georgia, serif;
+    color: #212931;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    background-size: 100% auto;
+}
+
+#wrapper > header {
+    background-color: #5A4D45;
+    text-align: center;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Joti One', Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+
+h2, h3, h4, nav ul, #copyright, table th, .heading {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+}
+
+h1 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    margin: 0 0 2rem 0;
+    font-size: 1rem;
+}
+
+/* Background's color and image */
+main {
+    background-color: #E0DFDB;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #D59B6F;
+}
+
+/* Copyright */
+#copyright {
+    background-color: #D59B6F;
+}
+
+/* Social-Share */
+#social-share {
+    background-color: #D59B6F;
+}
+
+main, footer, #copyright, #social-share {
+    margin: 0 auto;
+    max-width: 72rem;
+}
+
+/* Header */
+header h1::before {
+    content: url('../images/paella-lunch64.png');
+    position: relative;
+    padding-right: 1rem;
+    vertical-align: middle;
+}
+
+/* Main */
+
+#about-background {
+    background-image: url('../images/about-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#submit-background {
+    background-image: url('../images/submit-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+#meal-info-background {
+    background-image: url('../images/meal-recipe-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#drink-info-background {
+    background-image: url('../images/drink-recipe-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#model-info-background {
+    background-image: url('../images/food-3d-model-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section > ul {
+    list-style-type: none;
+    list-style-position: inside;
+    line-height: 2;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+article {
+    margin: 1.5rem 4rem;
+    padding-bottom: 7rem;
+    white-space: pre-line;
+}
+
+article > p {
+    margin: 1rem 0 1rem 0;
+    text-align: left;
+}
+
+article > hr {
+    border: 1px solid #E2910C;
+}
+
+article > picture {
+    white-space: normal;
+}
+
+article > picture img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+article > picture img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#submit-recipe-title {
+    margin: 1.5rem 0;
+}
+
+#meals-article {
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+#drinks-article {
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+#models-article {
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+#no-meals-found {
+    margin: 1.5rem 0;
+}
+
+#no-drinks-found {
+    margin: 1.5rem 0;
+}
+
+#no-models-found {
+    margin: 1.5rem 0;
+}
+
+/* Footer*/
+footer {
+    display: flex;
+}
+
+footer p {
+    color: #000;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    justify-content: space-around;
+}
+
+/* Copyright */
+#copyright {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #000;
+    background-color: #BF8E6F;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#copyright ul li {
+    border-left: solid 2px black;
+    display: inline-block;
+    line-height: 1;
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+
+/* Social-Share */
+#social-share {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #000;
+    background-color: #BF8E6F;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#social-share ul li {
+    border: 0px;
+    display: inline-block;
+    line-height: 1;
+}
+
+#social-share ul li a:hover,
+#social-share ul li a:focus {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#social-share ul li a:focus {
+    outline-style: none;
+}
+
+/* Table */
+tbody tr:nth-of-type(odd) {
+    background-color: rgba(226, 145, 12, 0.25);
+}
+
+/* Form */
+form {
+    width: 70%;
+    margin: 1rem auto 1rem auto;
+}
+
+fieldset {
+    margin-bottom: 2em;
+    padding: 2em;
+    border: 1px solid #E2910C;
+}
+
+input, textarea {
+    border: 1px solid #dfdbdb;
+    color: #212931;
+    font-size: 1.2rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    background-color: #E2910C;
+}
+
+input[type="file"] {
+    padding: 5px;
+    border: 1px solid #E2910C;
+    background-color: #E0DFDB;
+    font-size: 17px;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #E2910C;
+    color: #000;
+    border: solid #E2910C;
+    padding: 0.25rem 0.5rem;
+}
+
+input[type="file"]:hover {
+    outline: solid #E2910C;
+}
+
+input[type="file"]:focus {
+    outline: solid #E2910C;
+}
+
+input[type="file"]::file-selector-button:hover,
+input[type="file"]::file-selector-button:focus {
+    background: #5A4D45;
+    color: #fff;
+    border: solid #5A4D45;
+}
+
+#form-submit {
+    background-color: #E2910C;
+    color: #000;
+    border: solid #E2910C;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 17px;
+}
+
+#form-submit:hover,
+#form-submit:focus {
+    background: #5A4D45;
+    color: #fff;
+    border: solid #5A4D45;
+}
+
+#form-reset {
+    background-color: #E2910C;
+    color: #000;
+    border: solid #E2910C;
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 17px;
+}
+
+#form-reset:hover,
+#form-reset:focus {
+    background: #5A4D45;
+    color: #fff;
+    border: solid #5A4D45;
+}
+
+/* Form.search-form */
+form.search-form input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+form.search-form input[type=text]:focus {
+    background: #E0DFDB;
+}
+
+form.search-form button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background-color: #E2910C;
+    color: #000;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+form.search-form button:hover,
+form.search-form button:focus {
+    color: #fff;
+    background: #5A4D45;
+    outline: none;
+}
+
+form.search-form::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Back to Top Button */
+.btn {
+    background-color: #5A4D45;
+    border: none;
+    color: #fff;
+    padding: 12px 16px;
+    margin-left: 1.5rem;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+/* FontAwesome icons */
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-solid {
+    font-weight: 900;
+}
+
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.fa-bars:before {
+    content: "\f0c9";
+}
+
+.fa-home:before {
+    content: "\f015";
+}
+
+.fa-cutlery:before {
+    content: "\f0f5";
+}
+
+.fa-glass:before {
+    content: "\f000";
+}
+
+.fa-check:before{
+    content: "\f00c";
+}
+
+.fa-search:before{
+    content: "\f002";
+}
+
+.fa-table:before {
+    content: "\f0ce";
+}
+
+.fa-paper-plane:before {
+    content: "\f1d8";
+}
+
+.fa-arrow-up:before{
+    content: "\f062";
+}
+
+.fa-cube:before {
+    content: "\f1b2";
+}
+
+.fa-share {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    padding: 10px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-share:hover,
+.fa-share:focus {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.fa-share:focus {
+    outline-style: none;
+}
+
+.fa-facebook:before {
+    content:"\f09a";
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-facebook-square:before {
+    content:"\f082";
+}
+
+.fa-facebook-square {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter:before {
+    content:"\f099";
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-twitter-square:before {
+    content:"\f081";
+}
+
+.fa-twitter-square {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-pinterest:before {
+    content:"\f0d2";
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+.fa-pinterest-square:before {
+    content:"\f0d3";
+}
+
+.fa-pinterest-square {
+    background: #cb2027;
+    color: white;
+}
+
+.fa-instagram:before {
+    content:"\f16d";
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+}
+
+.fa-google:before {
+    content:"\f1a0";
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-youtube:before {
+    content:"\f167";
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-youtube-play:before {
+    content:"\f16a";
+}
+
+.fa-youtube-play {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-linkedin:before { 
+    content:"\f0e1";
+}
+
+.fa-linkedin { 
+    background: #007bb5;
+    color: white;
+}
+
+.fa-reddit:before {
+    content:"\f1a1";
+}
+
+.fa-reddit {
+    background: #ff5700;
+    color: white;
+}
+
+.fa-reddit-square:before {
+    content:"\f1a2";
+}
+
+.fa-reddit-square {
+    background: #ff5700;
+    color: white;
+}
+
+.fa-remove:before,
+.fa-close:before {
+    content: "\f00d";
+}
+
+/* Visually hides an element containing a text-equivalent for an icon 
+   while keeping it accessible to assisitive technologies */
+.fa-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Canvas */
+#myCanvas {
+    background-color: #000;
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+@media screen and (max-width: 600px) 
+{
+    /* Main */
+
+    #about-background {
+        background-position: center;
+    }
+
+    article {
+        margin: 1.5rem 1rem;
+    }
+
+    /* Table */
+    table {
+        margin-bottom: 3rem;
+    }
+
+    table, thead, tbody, th, tr, td {
+        display: block;
+        white-space: normal;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border-bottom: 1px solid #ccc;
+        padding-top: 0.5rem;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+
+        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        font-weight: 900;
+        letter-spacing: 0.075em;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Type";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Description";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Recipes";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Ingredients";
+    }
+
+    /* Form */
+    form {
+        width: 100%;
+        margin: 1rem 0 5rem 0;
+    }
+
+    fieldset{
+        margin-bottom: 1em;
+        padding: 1rem 0 1rem 0.5rem;
+    }
+    
+    label {
+        width: 100%;
+        text-align: left;
+        display: block;
+    }
+
+    input, 
+    textarea {
+        width: 15rem;
+    }
+
+    /* Form.search-form */
+    form.search-form {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Canvas */
+    #myCanvas {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 601px)
+{
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    /* Main */
+    article {
+        margin: 1.5rem 2rem;
+    }
+
+    /* Table */
+    table {
+        width: 100%;
+        max-width: 60rem;
+        margin-bottom: 3rem;
+    }
+
+    th {
+        color: #212931;
+        font-weight: bold;
+        font-size: 0.8rem;
+        padding: 0.75rem;
+        padding-top: 0;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    td {
+        padding: 0.3rem;
+    }
+
+    /* Form */
+    form{
+        width: 80%;
+        margin: 1rem auto 5rem auto;
+    }
+
+    label {
+        width: 100%;
+        text-align: left;
+        display: block;
+    }
+
+    /* Form.search-form */
+    form.search-form {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Footer */
+    footer {
+        justify-content: space-around;
+    }
+
+    footer address {
+        width: 12rem;
+        padding: 2rem 4rem;
+        font-style: normal;
+    }
+}
+
+@media screen and (min-width: 1024px) 
+{
+    /* Main */
+    article {
+        margin: 1.5rem 4rem;
+    }
+
+    /* Form */
+    form{
+        width: 70%;
+        margin: 1rem auto 5rem auto;
+    }
+
+    label {
+        width: 100%;
+        text-align: left;
+        display: inline;
+    }
+
+    /* Form.search-form */
+    form.search-form {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}

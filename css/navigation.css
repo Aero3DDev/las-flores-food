@@ -1,0 +1,113 @@
+/* Nav */
+.topnav {
+    /* The image used */
+    background-image: url("../images/paella.JPG");
+
+    min-height: 380px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+
+    background-color: #5A4D45;
+
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+/* Position the navbar inside the background image */
+
+/* The navbar */
+.topnav ul {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+    overflow: hidden;
+    background-color: #333;
+
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+.topnav li {
+    float: none;
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Navbar links */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover, 
+.topnav a:focus {
+    background-color: #ddd;
+    color: black;
+    outline: none;
+}
+
+.topnav .active {
+    background-color: #5A4D45;
+}
+
+.topnav li:first-child {
+    display: none;
+}
+
+/* Navbar icons */
+.topnav .menu-icon {
+    display: none;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("MENY"). 
+   Show the link that contains should open and close the topnav (.menu-icon) */
+@media screen and (max-width: 600px)
+{
+    .topnav li:not(:first-child) { display: none; }
+    .topnav li:first-child { display: flex; }
+    .topnav li:last-child { display: flex; }
+
+    .topnav a.menu-icon {
+        float: right;
+        display: flex;
+        flex-grow: 1;
+    }
+}
+  
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the menu-icon. 
+   This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px)
+{
+    .topnav.responsive ul { flex-direction: column; }
+
+    .topnav.responsive a.menu-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive li {
+        float: none;
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .topnav.responsive li a {
+        float: none;
+        display: flex;
+        flex-grow: 1;
+        text-align: left;
+    }
+}
