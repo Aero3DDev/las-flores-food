@@ -5,4 +5,4 @@ This project was started from an assignment I got from a web design course I too
 There are still improvements to be made such as making the form to upload new recipes dynamically.
 <br/>
 ## Links
-🔗 Please see [Las Flores Food](https://aero3ddev.github.io/las-flores-food/) site.
+🔗 Try it live: [Las Flores Food](https://aero3ddev.github.io/las-flores-food/).
